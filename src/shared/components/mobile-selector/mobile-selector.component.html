@@ -1,0 +1,20 @@
+<div class="mobile-selector">
+  <div class="container-fluid">
+    <div class="row mobile-selector-title">
+      <div class="col">
+        <h2>Selecione o Mobile</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row mobile-selector-list">
+      <div *ngFor="let mobile of mobiles" class="col-4 col-sm-2">
+        <mobile
+          [mobile]="mobile"
+          (selectedMobile)="selectedMobile($event)"
+        ></mobile>
+      </div>
+    </div>
+  </div>
+</div>
